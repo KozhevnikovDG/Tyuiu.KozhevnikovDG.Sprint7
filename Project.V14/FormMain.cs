@@ -195,6 +195,9 @@ namespace Project.V14
                 {
                     MessageBox.Show($"Произошла ошибка при чтении файла: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                buttonShowResult_KDG.Enabled = true;
+
             }
         }
 
