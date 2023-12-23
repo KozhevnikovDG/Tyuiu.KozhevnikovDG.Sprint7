@@ -198,48 +198,40 @@ namespace Project.V14
             }
         }
 
-        private void dataGridViewResult_KDG_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        private void buttonHelp_KDG_Click(object sender, EventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            int columnIndex = e.ColumnIndex;
+            FormAbout formAbout = new FormAbout();
+            formAbout.ShowDialog();
+        }
 
-            // Проверка на допустимость индексов
-            if (rowIndex >= 0 && rowIndex < dataGridViewResult_KDG.Rows.Count &&
-                columnIndex >= 0 && columnIndex < dataGridViewResult_KDG.Columns.Count)
-            {
-                DataGridViewCell cell = dataGridViewResult_KDG.Rows[rowIndex].Cells[columnIndex];
-                string value = cell.Value?.ToString(); // Проверка на null
+        private void buttonAddFile_KDG_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip_KDG.ToolTipTitle = "Открыть файл";
+        }
 
-                // Обновление данных в привязанных данных ячейки
-                if (transportDataList.Count > rowIndex)
-                {
-                    // Проверка на допустимость индекса в transportDataList
-                    if (columnIndex == 0)
-                    {
-                        transportDataList[rowIndex].KindOfTransport = value;
-                    }
-                    else if (columnIndex == 1)
-                    {
-                        transportDataList[rowIndex].Number = value;
-                    }
-                    else if (columnIndex == 2)
-                    {
-                        transportDataList[rowIndex].Date = value;
-                    }
-                    else if (columnIndex == 3)
-                    {
-                        transportDataList[rowIndex].StartStop = value;
-                    }
-                    else if (columnIndex == 4)
-                    {
-                        transportDataList[rowIndex].EndStop = value;
-                    }
-                    else if (columnIndex == 5)
-                    {
-                        transportDataList[rowIndex].TravelTime = value;
-                    }
-                }
-            }
+        private void buttonShowResult_KDG_MouseHover(object sender, EventArgs e)
+        {
+            toolTip_KDG.ToolTipTitle = "Расчет элементов статистики";
+        }
+
+        private void buttonSave_KDG_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip_KDG.ToolTipTitle = "Сохранить файл";
+        }
+
+        private void buttonAdd_KDG_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip_KDG.ToolTipTitle = "Добавить характеристики в таблиц";
+        }
+
+        private void buttonHelp_KDG_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip_KDG.ToolTipTitle = "Справка";
+        }
+
+        private void buttonFind_KDG_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip_KDG.ToolTipTitle = "Найти элемент из таблицы";
         }
     }
 }

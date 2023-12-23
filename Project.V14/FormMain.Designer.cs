@@ -31,12 +31,6 @@ namespace Project.V14
         {
             this.components = new System.ComponentModel.Container();
             this.panelButton_KDG = new System.Windows.Forms.Panel();
-            this.buttonAddFile_KDG = new System.Windows.Forms.Button();
-            this.buttonShowResult_KDG = new System.Windows.Forms.Button();
-            this.buttonSave_KDG = new System.Windows.Forms.Button();
-            this.buttonAdd_KDG = new System.Windows.Forms.Button();
-            this.buttonHelp_KDG = new System.Windows.Forms.Button();
-            this.buttonFind_KDG = new System.Windows.Forms.Button();
             this.textBoxFind_KDG = new System.Windows.Forms.TextBox();
             this.panelAdd_KDG = new System.Windows.Forms.Panel();
             this.groupBoxAdd_KDG = new System.Windows.Forms.GroupBox();
@@ -57,6 +51,12 @@ namespace Project.V14
             this.dataGridViewResult_KDG = new System.Windows.Forms.DataGridView();
             this.toolTip_KDG = new System.Windows.Forms.ToolTip(this.components);
             this.saveFileDialog_KDG = new System.Windows.Forms.SaveFileDialog();
+            this.buttonAddFile_KDG = new System.Windows.Forms.Button();
+            this.buttonShowResult_KDG = new System.Windows.Forms.Button();
+            this.buttonSave_KDG = new System.Windows.Forms.Button();
+            this.buttonAdd_KDG = new System.Windows.Forms.Button();
+            this.buttonHelp_KDG = new System.Windows.Forms.Button();
+            this.buttonFind_KDG = new System.Windows.Forms.Button();
             this.panelButton_KDG.SuspendLayout();
             this.panelAdd_KDG.SuspendLayout();
             this.groupBoxAdd_KDG.SuspendLayout();
@@ -77,74 +77,15 @@ namespace Project.V14
             this.panelButton_KDG.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelButton_KDG.Location = new System.Drawing.Point(0, 0);
             this.panelButton_KDG.Name = "panelButton_KDG";
-            this.panelButton_KDG.Size = new System.Drawing.Size(1028, 95);
+            this.panelButton_KDG.Size = new System.Drawing.Size(1068, 95);
             this.panelButton_KDG.TabIndex = 0;
-            // 
-            // buttonAddFile_KDG
-            // 
-            this.buttonAddFile_KDG.Location = new System.Drawing.Point(408, 12);
-            this.buttonAddFile_KDG.Name = "buttonAddFile_KDG";
-            this.buttonAddFile_KDG.Size = new System.Drawing.Size(95, 68);
-            this.buttonAddFile_KDG.TabIndex = 2;
-            this.buttonAddFile_KDG.Text = "Добавить файл ";
-            this.buttonAddFile_KDG.UseVisualStyleBackColor = true;
-            this.buttonAddFile_KDG.Click += new System.EventHandler(this.buttonAddFile_KDG_Click);
-            // 
-            // buttonShowResult_KDG
-            // 
-            this.buttonShowResult_KDG.Location = new System.Drawing.Point(307, 12);
-            this.buttonShowResult_KDG.Name = "buttonShowResult_KDG";
-            this.buttonShowResult_KDG.Size = new System.Drawing.Size(95, 68);
-            this.buttonShowResult_KDG.TabIndex = 2;
-            this.buttonShowResult_KDG.Text = "Результат";
-            this.buttonShowResult_KDG.UseVisualStyleBackColor = true;
-            this.buttonShowResult_KDG.Click += new System.EventHandler(this.buttonShowResult_KDG_Click);
-            // 
-            // buttonSave_KDG
-            // 
-            this.buttonSave_KDG.Location = new System.Drawing.Point(206, 12);
-            this.buttonSave_KDG.Name = "buttonSave_KDG";
-            this.buttonSave_KDG.Size = new System.Drawing.Size(95, 68);
-            this.buttonSave_KDG.TabIndex = 2;
-            this.buttonSave_KDG.Text = "Сохранить ";
-            this.buttonSave_KDG.UseVisualStyleBackColor = true;
-            this.buttonSave_KDG.Click += new System.EventHandler(this.buttonSave_KDG_Click);
-            // 
-            // buttonAdd_KDG
-            // 
-            this.buttonAdd_KDG.Location = new System.Drawing.Point(105, 12);
-            this.buttonAdd_KDG.Name = "buttonAdd_KDG";
-            this.buttonAdd_KDG.Size = new System.Drawing.Size(95, 68);
-            this.buttonAdd_KDG.TabIndex = 2;
-            this.buttonAdd_KDG.Text = "Добавить ";
-            this.buttonAdd_KDG.UseVisualStyleBackColor = true;
-            this.buttonAdd_KDG.Click += new System.EventHandler(this.buttonAdd_KDG_Click);
-            // 
-            // buttonHelp_KDG
-            // 
-            this.buttonHelp_KDG.Location = new System.Drawing.Point(3, 13);
-            this.buttonHelp_KDG.Name = "buttonHelp_KDG";
-            this.buttonHelp_KDG.Size = new System.Drawing.Size(96, 68);
-            this.buttonHelp_KDG.TabIndex = 2;
-            this.buttonHelp_KDG.Text = "Справка";
-            this.buttonHelp_KDG.UseVisualStyleBackColor = true;
-            // 
-            // buttonFind_KDG
-            // 
-            this.buttonFind_KDG.Location = new System.Drawing.Point(754, 32);
-            this.buttonFind_KDG.Name = "buttonFind_KDG";
-            this.buttonFind_KDG.Size = new System.Drawing.Size(133, 39);
-            this.buttonFind_KDG.TabIndex = 1;
-            this.buttonFind_KDG.Text = "Поиск";
-            this.buttonFind_KDG.UseVisualStyleBackColor = true;
-            this.buttonFind_KDG.Click += new System.EventHandler(this.buttonFind_KDG_Click);
             // 
             // textBoxFind_KDG
             // 
-            this.textBoxFind_KDG.Location = new System.Drawing.Point(893, 32);
+            this.textBoxFind_KDG.Location = new System.Drawing.Point(942, 13);
             this.textBoxFind_KDG.Multiline = true;
             this.textBoxFind_KDG.Name = "textBoxFind_KDG";
-            this.textBoxFind_KDG.Size = new System.Drawing.Size(123, 39);
+            this.textBoxFind_KDG.Size = new System.Drawing.Size(123, 57);
             this.textBoxFind_KDG.TabIndex = 0;
             // 
             // panelAdd_KDG
@@ -286,7 +227,7 @@ namespace Project.V14
             this.panelResult_KDG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelResult_KDG.Location = new System.Drawing.Point(216, 95);
             this.panelResult_KDG.Name = "panelResult_KDG";
-            this.panelResult_KDG.Size = new System.Drawing.Size(812, 415);
+            this.panelResult_KDG.Size = new System.Drawing.Size(852, 415);
             this.panelResult_KDG.TabIndex = 2;
             // 
             // groupBoxResult_KDG
@@ -295,7 +236,7 @@ namespace Project.V14
             this.groupBoxResult_KDG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxResult_KDG.Location = new System.Drawing.Point(0, 0);
             this.groupBoxResult_KDG.Name = "groupBoxResult_KDG";
-            this.groupBoxResult_KDG.Size = new System.Drawing.Size(812, 415);
+            this.groupBoxResult_KDG.Size = new System.Drawing.Size(852, 415);
             this.groupBoxResult_KDG.TabIndex = 0;
             this.groupBoxResult_KDG.TabStop = false;
             this.groupBoxResult_KDG.Text = "Результат ";
@@ -308,18 +249,98 @@ namespace Project.V14
             this.dataGridViewResult_KDG.Name = "dataGridViewResult_KDG";
             this.dataGridViewResult_KDG.RowHeadersWidth = 51;
             this.dataGridViewResult_KDG.RowTemplate.Height = 24;
-            this.dataGridViewResult_KDG.Size = new System.Drawing.Size(806, 394);
+            this.dataGridViewResult_KDG.Size = new System.Drawing.Size(846, 394);
             this.dataGridViewResult_KDG.TabIndex = 0;
-            this.dataGridViewResult_KDG.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewResult_KDG_CellEndEdit);
+            // 
+            // toolTip_KDG
+            // 
+            this.toolTip_KDG.IsBalloon = true;
+            this.toolTip_KDG.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip_KDG.ToolTipTitle = "Подсказка";
+            // 
+            // buttonAddFile_KDG
+            // 
+            this.buttonAddFile_KDG.Image = global::Project.V14.Properties.Resources.folder_page;
+            this.buttonAddFile_KDG.Location = new System.Drawing.Point(408, 12);
+            this.buttonAddFile_KDG.Name = "buttonAddFile_KDG";
+            this.buttonAddFile_KDG.Size = new System.Drawing.Size(95, 68);
+            this.buttonAddFile_KDG.TabIndex = 2;
+            this.buttonAddFile_KDG.Text = " ";
+            this.toolTip_KDG.SetToolTip(this.buttonAddFile_KDG, "Открыть файл для обработки данных в формате CSV");
+            this.buttonAddFile_KDG.UseVisualStyleBackColor = true;
+            this.buttonAddFile_KDG.Click += new System.EventHandler(this.buttonAddFile_KDG_Click);
+            this.buttonAddFile_KDG.MouseEnter += new System.EventHandler(this.buttonAddFile_KDG_MouseEnter);
+            // 
+            // buttonShowResult_KDG
+            // 
+            this.buttonShowResult_KDG.Image = global::Project.V14.Properties.Resources.page_go;
+            this.buttonShowResult_KDG.Location = new System.Drawing.Point(307, 12);
+            this.buttonShowResult_KDG.Name = "buttonShowResult_KDG";
+            this.buttonShowResult_KDG.Size = new System.Drawing.Size(95, 68);
+            this.buttonShowResult_KDG.TabIndex = 2;
+            this.toolTip_KDG.SetToolTip(this.buttonShowResult_KDG, "Выполнить обработку данных");
+            this.buttonShowResult_KDG.UseVisualStyleBackColor = true;
+            this.buttonShowResult_KDG.Click += new System.EventHandler(this.buttonShowResult_KDG_Click);
+            this.buttonShowResult_KDG.MouseHover += new System.EventHandler(this.buttonShowResult_KDG_MouseHover);
+            // 
+            // buttonSave_KDG
+            // 
+            this.buttonSave_KDG.Image = global::Project.V14.Properties.Resources.page_save;
+            this.buttonSave_KDG.Location = new System.Drawing.Point(206, 12);
+            this.buttonSave_KDG.Name = "buttonSave_KDG";
+            this.buttonSave_KDG.Size = new System.Drawing.Size(95, 68);
+            this.buttonSave_KDG.TabIndex = 2;
+            this.buttonSave_KDG.Text = " ";
+            this.toolTip_KDG.SetToolTip(this.buttonSave_KDG, "Сохранить файл в формате CSV");
+            this.buttonSave_KDG.UseVisualStyleBackColor = true;
+            this.buttonSave_KDG.Click += new System.EventHandler(this.buttonSave_KDG_Click);
+            this.buttonSave_KDG.MouseEnter += new System.EventHandler(this.buttonSave_KDG_MouseEnter);
+            // 
+            // buttonAdd_KDG
+            // 
+            this.buttonAdd_KDG.Image = global::Project.V14.Properties.Resources.page_add;
+            this.buttonAdd_KDG.Location = new System.Drawing.Point(105, 12);
+            this.buttonAdd_KDG.Name = "buttonAdd_KDG";
+            this.buttonAdd_KDG.Size = new System.Drawing.Size(95, 68);
+            this.buttonAdd_KDG.TabIndex = 2;
+            this.toolTip_KDG.SetToolTip(this.buttonAdd_KDG, "Добавить");
+            this.buttonAdd_KDG.UseVisualStyleBackColor = true;
+            this.buttonAdd_KDG.Click += new System.EventHandler(this.buttonAdd_KDG_Click);
+            this.buttonAdd_KDG.MouseEnter += new System.EventHandler(this.buttonAdd_KDG_MouseEnter);
+            // 
+            // buttonHelp_KDG
+            // 
+            this.buttonHelp_KDG.Image = global::Project.V14.Properties.Resources.information;
+            this.buttonHelp_KDG.Location = new System.Drawing.Point(3, 13);
+            this.buttonHelp_KDG.Name = "buttonHelp_KDG";
+            this.buttonHelp_KDG.Size = new System.Drawing.Size(96, 68);
+            this.buttonHelp_KDG.TabIndex = 2;
+            this.toolTip_KDG.SetToolTip(this.buttonHelp_KDG, "Сведения о программе ");
+            this.buttonHelp_KDG.UseVisualStyleBackColor = true;
+            this.buttonHelp_KDG.Click += new System.EventHandler(this.buttonHelp_KDG_Click);
+            this.buttonHelp_KDG.MouseEnter += new System.EventHandler(this.buttonHelp_KDG_MouseEnter);
+            // 
+            // buttonFind_KDG
+            // 
+            this.buttonFind_KDG.Image = global::Project.V14.Properties.Resources.magnifier;
+            this.buttonFind_KDG.Location = new System.Drawing.Point(803, 12);
+            this.buttonFind_KDG.Name = "buttonFind_KDG";
+            this.buttonFind_KDG.Size = new System.Drawing.Size(133, 58);
+            this.buttonFind_KDG.TabIndex = 1;
+            this.toolTip_KDG.SetToolTip(this.buttonFind_KDG, "Поиск");
+            this.buttonFind_KDG.UseVisualStyleBackColor = true;
+            this.buttonFind_KDG.Click += new System.EventHandler(this.buttonFind_KDG_Click);
+            this.buttonFind_KDG.MouseEnter += new System.EventHandler(this.buttonFind_KDG_MouseEnter);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 510);
+            this.ClientSize = new System.Drawing.Size(1068, 510);
             this.Controls.Add(this.panelResult_KDG);
             this.Controls.Add(this.panelAdd_KDG);
             this.Controls.Add(this.panelButton_KDG);
+            this.MinimumSize = new System.Drawing.Size(1086, 557);
             this.Name = "FormMain";
             this.Text = "Проект ";
             this.panelButton_KDG.ResumeLayout(false);
