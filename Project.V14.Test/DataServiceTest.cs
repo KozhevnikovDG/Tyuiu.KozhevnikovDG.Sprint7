@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.IO;
+using System.Collections.Generic;
 using Project.V14.Lib;
 
 namespace Project.V14.Test
@@ -8,28 +8,27 @@ namespace Project.V14.Test
     [TestClass]
     public class DataServiceTest
     {
+
         [TestMethod]
-        public void CountCsvLines_ExcludeHeader_CorrectCount()
+        public void CalculateStatistics_ValidData_ReturnsCorrectStatistics()
         {
-            string testFilePath = @"C:\Users\f1zog\source\repos\Tyuiu.KozhevnikovDG.Sprint7\Project.V14\bin\Debug\проект.csv";
-
-            int lineCount = 0;
-
-            // Действие
-            using (var reader = new StreamReader(testFilePath))
+            // Arrange
+            var transportDataList = new List<TransportData>
             {
-                // Пропускаем заголовок
-                reader.ReadLine();
+                new TransportData { TravelTime = "10" },
+                new TransportData { TravelTime = "15" },
+                new TransportData { TravelTime = "20" },
+            };
 
-                // Считаем оставшиеся строки
-                while (reader.ReadLine() != null)
-                {
-                    lineCount++;
-                }
-            }
+            // Act
+            var result = DataService.CalculateStatistics(transportDataList);
 
-            // Проверка
-            Assert.AreEqual(1, lineCount); // Предполагаемое количество строк: 14
+            // Assert
+            Assert.AreEqual(3, result.Count);
+            Assert.AreEqual(45, result.Sum);
+            Assert.AreEqual(15, result.Average);
+            Assert.AreEqual(10, result.Min);
+            Assert.AreEqual(20, result.Max);
         }
     }
 }
