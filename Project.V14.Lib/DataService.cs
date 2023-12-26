@@ -1,48 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace Project.V14.Lib
 {
-    public class TransportData
+    public class DataService
     {
-        public string KindOfTransport { get; set; }
-        public string Number { get; set; }
-        public string Date { get; set; }
-        public string StartStop { get; set; }
-        public string EndStop { get; set; }
-        public string TravelTime { get; set; }
-    }
-
-    public class StatisticsResult
-    {
-        public int Count { get; set; }
-        public double Sum { get; set; }
-        public double Average { get; set; }
-        public double Min { get; set; }
-        public double Max { get; set; }
-    }
-
-    public static class DataService
-    {
-
-        public static StatisticsResult CalculateStatistics(List<TransportData> transportDataList)
+        public static int CountCsvLines(string filePath)
         {
-            if (transportDataList == null || !transportDataList.Any())
+            int lineCount = 0;
+
+            using (var reader = new StreamReader(filePath))
             {
-                throw new ArgumentException("Список данных транспорта не может быть пустым.");
+                // Пропускаем заголовок
+                reader.ReadLine();
+
+                // Считаем оставшиеся строки
+                while (reader.ReadLine() != null)
+                {
+                    lineCount++;
+                }
             }
 
-            var travelTimes = transportDataList.Select(data => Convert.ToDouble(data.TravelTime));
-
-            return new StatisticsResult
-            {
-                Count = travelTimes.Count(),
-                Sum = travelTimes.Sum(),
-                Average = travelTimes.Average(),
-                Min = travelTimes.Min(),
-                Max = travelTimes.Max()
-            };
+            return lineCount;
         }
     }
 }
